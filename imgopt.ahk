@@ -2,6 +2,12 @@
 #NoEnv
 
 Title := "Image Optimizer"
+
+if A_Args.Length() < 1 {
+    MsgBox, 0x30, %Title%, There are no files to optimize.`nPlease, pass files to optimize as command line arguments.
+    ExitApp, 1
+}
+
 ArgsLength := A_Args.Length()
 
 Gui, New, -MaximizeBox -MinimizeBox, %Title%
