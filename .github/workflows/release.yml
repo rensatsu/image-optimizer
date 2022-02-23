@@ -13,13 +13,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        choco install autohotkey.portable imagemagick.tool innosetup
+        choco install autohotkey imagemagick.app innosetup
 
     - name: Build app
       shell: powershell
       run: |
         $pwd = Get-Location
-        & build.bat
+        & .\build.bat
         & iscc installer.iss /DAppSrc=$pwd
 
     - name: Create an archive
