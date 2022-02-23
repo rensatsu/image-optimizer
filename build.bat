@@ -1,2 +1,3 @@
 @echo off
-"C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in imgopt.ahk /out imgopt.exe /compress 0 /icon icon.ico
+if not exist dist mkdir dist
+"C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in imgopt.ahk /compress 0 /icon icon.ico /out dist\imgopt.exe
