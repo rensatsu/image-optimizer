@@ -13,7 +13,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        choco install autohotkey imagemagick.app innosetup
+        choco install autohotkey imagemagick.app innosetup --limit-output
 
     - name: Build app
       shell: powershell
