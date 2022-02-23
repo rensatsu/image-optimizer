@@ -13,7 +13,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        choco install autohotkey imagemagick.app innosetup --limit-output
+        choco install autohotkey imagemagick.app innosetup --limit-output -y
 
     - name: Build app
       shell: powershell
@@ -30,6 +30,6 @@ jobs:
     - name: Create release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "dist/imgopt-setup.exe,dist/imgopt-setup.7z"
+        artifacts: "dist/imgopt-setup.7z"
         token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') }}
