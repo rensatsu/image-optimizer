@@ -13,9 +13,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        choco install autohotkey.portable
-        choco install imagemagick.tool
-        choco install innosetup
+        choco install autohotkey.portable imagemagick.tool innosetup
 
     - name: Build app
       shell: powershell
